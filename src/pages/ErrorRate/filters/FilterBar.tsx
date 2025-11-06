@@ -34,9 +34,10 @@ export function FilterBar({ value, onChange }: Props) {
           ]}
         />
         {value.period === 'custom' && (
-          <DatePicker.RangePicker
+          <DatePicker
+            type="dateRange"
             style={{ width: 260 }}
-            onChange={(v) => onChange({ ...value, dateRange: v ? [v[0]?.toString()!, v[1]?.toString()!] : null })}
+            onChange={(v: any) => onChange({ ...value, dateRange: v ? [v[0]?.toString()!, v[1]?.toString()!] : null })}
           />
         )}
         <Select

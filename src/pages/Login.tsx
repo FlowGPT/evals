@@ -40,7 +40,7 @@ export function LoginPage() {
             <>
               <Form.Input field="username" label="用户名" placeholder="请输入" rules={[{ required: true, message: '必填' }]} />
               <Form.Input mode="password" field="password" label="密码" placeholder="请输入" rules={[{ required: true, message: '必填' }]} />
-              <Button block theme="solid" type="primary" htmlType="submit" loading={loading} disabled={formState.isSubmitting}>
+              <Button block theme="solid" type="primary" htmlType="submit" loading={loading} disabled={loading}>
                 登录
               </Button>
             </>
